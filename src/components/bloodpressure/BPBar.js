@@ -5,6 +5,7 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 // bootstrap doesn't work...wtf
 // figure out how to calculate percentBP before render
+// https://encycolorpedia.com/efe6f9
 export default function BPBar(props) {
     const { completed, bp} = props;
     // get value of previous state
@@ -158,8 +159,8 @@ export default function BPBar(props) {
                     <div style={divisionStyles}><p style={{fontSize: '1.5em'}}>160</p></div>
                     <div style={divisionStyles}><p style={{fontSize: '1.5em'}}>200</p></div>
                 </div>
-                <div style={{height: '200px'}}>
-                    { bp != 0 ? <p>You are in <b>{bpMsg}</b> range</p> : <p></p>}
+                <div style={{height: '100px'}}>
+                    { bp != 0 ? <p style={{margin: "1em"}}>You are in <b>{bpMsg}</b> range</p> : <p style={{margin: "1em"}}></p>}
                 </div>
             </div>
             

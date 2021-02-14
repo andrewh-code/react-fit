@@ -62,29 +62,33 @@ p#error {
 /* bp info table */
 table {
   width: 100%;
-  border: 0.5px solid #c2c2c2;
+  /* border: 0.5px solid #c2c2c2; */
   text-align: center;
   margin: 0 auto;
 }
 
 tr {
   font-weight: 100;
-  border: 0.5px solid #c2c2c2;
+  /* border: 0.5px solid #c2c2c2; */
   text-align: center;
   margin: 0 auto;
 }
 
 th {
   font-weight: 500;
-  border: 0.5px solid #c2c2c2;
+  /* border: 0.5px solid #c2c2c2; */
   font-size: 1em;
   text-align: center;
   margin: 0 auto;
 }
 
+table tr th {
+  text-decoration: underline;
+}
+
 td {
   font-weight: 300;
-  border: 0.5px solid #c2c2c2;
+  /* border: 0.5px solid #c2c2c2; */
   font-size: 1em;
   text-align: center;
 }

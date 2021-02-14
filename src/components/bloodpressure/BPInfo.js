@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import '../App.css';
+import '../../App.css';
 
 export default function BPInfo() {
 
@@ -18,8 +18,6 @@ export default function BPInfo() {
                 
             <table>
                 <tbody>
-
-                
                 <tr>
                     <th>Colour</th>
                     <th>Type</th>

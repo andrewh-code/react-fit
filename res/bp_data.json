@@ -1,0 +1,63 @@
+[
+    {
+        "date": "2/10/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/9/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/8/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/7/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/6/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/5/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/4/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/3/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/2/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    },
+    {
+        "date": "2/1/2021",
+        "systolic": 120,
+        "diastolic": 80,
+        "heartRate": 66
+    }
+
+]

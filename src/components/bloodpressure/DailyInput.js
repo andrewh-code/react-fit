@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import BPBar from './BPBar';
-import '../App.css';
+import '../../App.css';
 
 export default class DailyInput extends Component {
     
@@ -99,13 +99,11 @@ export default class DailyInput extends Component {
 
         return (
             <Fragment>
-                <div>
-                    Please Enter the Following
+                <div style={{marginTop: '1.5em', marginBottom: '1em'}}>
+                    <h2>Today: {today}</h2>
                 </div>
                 <div className="container">
-                    <div className="row align-center">
-                        <h2>{today}</h2>
-                    </div>
+                    
                     <div className="row">
                         <div className="col-3">
                             <h3>Weight</h3>
@@ -139,7 +137,7 @@ export default class DailyInput extends Component {
                                     value={pulse}
                                     onChange={this.handleChange} 
                                     required/>
-                                    {pulseErr ? <p id="error">{pulseErrMsg}</p> : <p></p>}
+                                    {pulseErr ? <p id="error">{pulseErrMsg}</p> : <p id="error"></p>}
                             </div>
                             <div className="col-3">
                                 <input 
@@ -167,11 +165,16 @@ export default class DailyInput extends Component {
                         <button className="btn btn-light" type="submit">Check Blood Pressure</button>
                     </form>
                 </div>
+
                 <BPBar bp={sys}></BPBar>
-                { this.state.showBPBar ?  <button 
-                                            className="btn btn-light" 
-                                            onClick={this.saveBPData}>Save Data</button>
-                                        : <div></div>
+
+                {/* { this.state.showBPBar ?  <div style={{margin: "1em"}}>
+                                                <button 
+                                                    className="btn btn-light" 
+                                                    onClick={this.saveBPData}>Save Data
+                                                </button>
+                                            </div>
+                                        : <div style={{margin: "2em"}}></div> }*/
                 }
             </Fragment>
         )
