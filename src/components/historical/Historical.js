@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react'
-import BMIHistorical from './BMIHistorical.js';
-import BPHistorical from './BPHistorical.js';
-import BMIAverage from './CardSummary/BMIAverage.js';
-import BPAverage from './CardSummary/BPAverage.js';
-import HRAverage from './CardSummary/HRAverage.js';
-import HRHistorical from './HRHistorical.js';
-import StatCard from './CardSummary/StatCard.js';
+import BMIHistoricalChart from './charts/BMIHistoricalChart.js';
+import StatCard from './cardsummary/StatCard.js';
 import { faHeartbeat, faWeight, faTachometerAlt, faPercentage } from '@fortawesome/free-solid-svg-icons';
+import HRHistoricalChart from './charts/HRHistoricalChart.js';
+import WeightHistoricalChart from './charts/WeightHistoricalChart.js';
+import BPHistoricalChart from './charts/BPHistoricalChart.js';
 
 function Historical() {
 
@@ -36,18 +34,18 @@ function Historical() {
             
             <div style={{width: '80%', overflow: 'hidden', top: '31vh', position: 'fixed'}}>
                 <div style={{width: '45%', float: 'left'}}>
-                    <BPHistorical/>
+                    <BPHistoricalChart/>
                 </div>
                 <div style={{width: '45%', float: 'right'}}>
-                    <BMIHistorical/>
+                    <BMIHistoricalChart/>
                 </div>
             </div>
             <div style={{width: '80%', overflow: 'hidden', top: '65vh', position: 'fixed'}}>
                 <div style={{width: '45%', float: 'left'}}>
-                    <HRHistorical/>
+                    <HRHistoricalChart/>
                 </div>
                 <div style={{width: '45%', float: 'right'}}>
-                    <HRHistorical/>
+                    <WeightHistoricalChart/>
                 </div>
             </div>
         </Fragment>

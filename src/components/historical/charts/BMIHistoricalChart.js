@@ -1,78 +1,54 @@
 import React, { Component } from 'react'
 import { Line } from 'react-chartjs-2';
-import Test from './Test';
 
-export class HRHistorical extends Component {
+export class BMIHistoricalChart extends Component {
 
     constructor(props) {
         super(props);
         this.state = ({
-            dateValues: [],
-            hrValues: []
+            bmiValues: [],
+            dateArray: []
         });
-        
-        this.processHR = this.processHR.bind(this);
+
+        this.processBMI = this.processBMI.bind(this);
+
     }
-    
-    componentDidMount(){
-        // execute api request
+    componentDidMount() {
         let response = [
             {
                 "date": "2/10/2021",
-                "hr": 66,
+                "bmi": 24.1
             },
             {
                 "date": "2/9/2021",
-                "hr": 66,
+                "bmi": 21.1
             },
             {
                 "date": "2/8/2021",
-                "hr": 65,
+                "bmi": 22.1
             },
             {
                 "date": "2/7/2021",
-                "hr": 64,
+                "bmi": 24.1
             },
             {
                 "date": "2/6/2021",
-                "hr": 68,
+                "bmi": 23.1
             },
-            {
-                "date": "2/5/2021",
-                "hr": 80,
-            },
-            {
-                "date": "2/4/2021",
-                "hr": 61,
-            },
-            {
-                "date": "2/3/2021",
-                "hr": 59,
-            },
-            {
-                "date": "2/2/2021",
-                "hr": 58,
-            },
-            {
-                "date": "2/1/2021",
-                "hr": 55,
-            }
-        ];
-        this.processHR(response);
-        this.processDates(response);
-        
+        ]
+
+        this.processBMI(response);
     }
 
-    // process systolic data for array
-    processHR(response) {
-        var hrArray = response.map(hr => hr.hr);
+    processBMI(data) {
+        var bmiArray = data.map(bmi => bmi.bmi);
         this.setState({
-            hrValues: hrArray
-        });
+            bmiValues: bmiArray
+        })
     }
 
     processDates(response) {
-        var dateArray = response.map(hr => hr.date)
+        var dateArray = response.map(d => d.date)
 
         this.setState({
             dateValues: dateArray
@@ -81,25 +57,25 @@ export class HRHistorical extends Component {
 
     render() {
 
-        const { dateValues, hrValues } = this.state;
+        const { dateArray, bmiValues } = this.state;
 
         var graphInfo = {
-            labels: dateValues,
+            labels: dateArray,
             fontColor: '#FFFFFF',
 
             datasets: [
-              {
-                label: 'Heart Rate',
-                fill: false,
-                lineTension: 0.5,
-                backgroundColor: '#966fd6',
-                borderColor: '#966fd6',
-                borderWidth: 3,
-                data: hrValues,
-              }
+                {
+                    label: 'BMI',
+                    fill: false,
+                    lineTension: 0.5,
+                    backgroundColor: '#966fd6',
+                    borderColor: '#966fd6',
+                    borderWidth: 3,
+                    data: bmiValues,
+                    fill: true
+                }
             ]
-          }
-
+        }
 
         return (
             <div style={{background: '#333842', borderRadius: '10px'}}>
@@ -112,7 +88,7 @@ export class HRHistorical extends Component {
                     options={{
                         title: {
                             display: true,
-                            text: 'Heart Rate',
+                            text: 'BMI',
                             fontSize: 30,
                             fontColor: '#FFFFFF'
                         },
@@ -135,6 +111,9 @@ export class HRHistorical extends Component {
                                     fontColor: '#FFFFFF'
                                 }
                             }]
+                        },
+                        animation: {
+                            duration: 2000
                         }
                     }}
                 />
@@ -143,4 +122,4 @@ export class HRHistorical extends Component {
     }
 }
 
-export default HRHistorical
+export default BMIHistoricalChart

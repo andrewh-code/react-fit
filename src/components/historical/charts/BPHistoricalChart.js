@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Bar } from 'react-chartjs-2';
-import Test from './Test';
 
-export class BPHistorical extends Component {
+export class BPHistoricalChart extends Component {
 
     constructor(props) {
         super(props);
@@ -176,4 +175,4 @@ export class BPHistorical extends Component {
     }
 }
 
-export default BPHistorical
+export default BPHistoricalChart

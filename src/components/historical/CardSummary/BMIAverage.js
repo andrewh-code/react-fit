@@ -18,12 +18,7 @@ function BMIAverage() {
 
     return (
         <Fragment>
-            <div style={cardContainerStyle}>
-                <StatCard title="Heart Rate" value="55" units="bpm" faIconComponent={faHeartbeat} date={date}/>
-                <StatCard title="Blood Pressure" value="120/80" units="mmHG" faIconComponent={faTachometerAlt} date={date}/>
-                <StatCard title="Weight" value="200" units="lb" faIconComponent={faWeight} date={date}/>
-                <StatCard title="BMI" value="24.4" units="lb/in^2" faIconComponent={faPercentage} date={date}/>
-            </div>
+            
         </Fragment>
 
     )
