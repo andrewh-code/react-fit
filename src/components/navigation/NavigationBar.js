@@ -35,9 +35,6 @@ export default function NavigationBar() {
                     <li>
                         <Link to='/bloodpressure'>Blood Pressure</Link>        
                     </li>
-                    <li>
-                        <Link to='/historical'>Historical</Link>
-                    </li>
                 </ul>
             </div>
     )

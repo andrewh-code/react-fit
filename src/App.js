@@ -4,6 +4,7 @@ import NavigationBar from './components/navigation/NavigationBar';
 import BloodPressure from './components/bloodpressure/BloodPressure';
 import { Route, BrowserRouter as Router} from 'react-router-dom';
 import Historical from './components/historical/Historical';
+import BMI from './components/bmi/BMI';
 
 export default class App extends Component {
 
@@ -14,8 +15,9 @@ export default class App extends Component {
         <div className="App">
           <NavigationBar />
           <header className="App-header">
-            <Route exact path = "/" component = { BloodPressure }/>
+            <Route exact path = "/" component = { Historical }/>
             <Route exact path = "/bloodpressure" component = { BloodPressure }/>
+            <Route exact path = "/bmi" component = { BMI }/>
             <Route exact path="/historical" component = { Historical }/>
           </header>
         </div>

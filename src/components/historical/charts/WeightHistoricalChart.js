@@ -7,10 +7,11 @@ export class WeightHistoricalChart extends Component {
         super(props);
         this.state = ({
             dateValues: [],
-            hrValues: []
+            weightValues: []
         });
         
         this.processHR = this.processHR.bind(this);
+        this.processDates = this.processDates.bind(this);
     }
     
     componentDidMount(){
@@ -18,43 +19,43 @@ export class WeightHistoricalChart extends Component {
         let response = [
             {
                 "date": "2/10/2021",
-                "hr": 66,
+                "hr": 150,
             },
             {
                 "date": "2/9/2021",
-                "hr": 66,
+                "hr": 151,
             },
             {
                 "date": "2/8/2021",
-                "hr": 65,
+                "hr": 152,
             },
             {
                 "date": "2/7/2021",
-                "hr": 64,
+                "hr": 153,
             },
             {
                 "date": "2/6/2021",
-                "hr": 68,
+                "hr": 154,
             },
             {
                 "date": "2/5/2021",
-                "hr": 80,
+                "hr": 156,
             },
             {
                 "date": "2/4/2021",
-                "hr": 61,
+                "hr": 154,
             },
             {
                 "date": "2/3/2021",
-                "hr": 59,
+                "hr": 153,
             },
             {
                 "date": "2/2/2021",
-                "hr": 58,
+                "hr": 152,
             },
             {
                 "date": "2/1/2021",
-                "hr": 55,
+                "hr": 150,
             }
         ];
         this.processHR(response);
@@ -64,9 +65,9 @@ export class WeightHistoricalChart extends Component {
 
     // process systolic data for array
     processHR(response) {
-        var hrArray = response.map(hr => hr.hr);
+        var weightArray = response.map(hr => hr.hr);
         this.setState({
-            hrValues: hrArray
+            weightValues: weightArray
         });
     }
 
@@ -80,7 +81,7 @@ export class WeightHistoricalChart extends Component {
 
     render() {
 
-        const { dateValues, hrValues } = this.state;
+        const { dateValues, weightValues } = this.state;
 
         var graphInfo = {
             labels: dateValues,
@@ -88,13 +89,13 @@ export class WeightHistoricalChart extends Component {
 
             datasets: [
               {
-                label: 'Heart Rate',
+                label: 'Weight',
                 fill: false,
                 lineTension: 0.5,
                 backgroundColor: '#966fd6',
                 borderColor: '#966fd6',
                 borderWidth: 3,
-                data: hrValues,
+                data: weightValues,
               }
             ]
           }
@@ -111,7 +112,7 @@ export class WeightHistoricalChart extends Component {
                     options={{
                         title: {
                             display: true,
-                            text: 'Heart Rate',
+                            text: 'Weight',
                             fontSize: 30,
                             fontColor: '#FFFFFF'
                         },
