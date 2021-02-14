@@ -38,7 +38,7 @@
 .navigation-bar a:hover {
     color: var(--light-color);
     color: #c2c2c2;
-    text-decoration: ;
+    text-decoration: none;
 }
 
 .navigation-bar .welcome span {
