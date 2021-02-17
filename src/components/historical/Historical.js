@@ -33,7 +33,7 @@ function Historical() {
             </div>
             
             <div style={{width: '90%', overflow: 'hidden', top: '31vh', position: 'fixed'}}>
-                <div style={{width: '40%', display: 'left'}}>
+                <div style={{width: '40%', float: 'left'}}>
                     <BPHistoricalChart/>
                 </div>
                 <div style={{width: '40%', float: 'right'}}>

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react'
 import { Line } from 'react-chartjs-2';
 
@@ -15,6 +16,11 @@ export class HRHistoricalChart extends Component {
     
     componentDidMount(){
         // execute api request
+        // let url = "https://raw.githubusercontent.com/andrewh-code/react-fit/main/mockdata/heartrate/historical_heart_rate.json";
+        // axios.get(url).then((response) => {
+        //     console.log(response);
+        // })
+        
         let response = [
             {
                 "date": "2/10/2021",
