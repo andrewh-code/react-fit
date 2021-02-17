@@ -23,7 +23,7 @@ function Historical() {
 
     return (
         <Fragment>
-            <div style={{width: '100%', overflow: 'hidden', top: '10vh', position: 'fixed'}}>
+            <div style={{width: '90%', overflow: 'hidden', top: '10vh', position: 'fixed'}}>
                 <div style={cardContainerStyle}>
                     <StatCard title="Heart Rate" value={hr} units="bpm" faIconComponent={faHeartbeat} date={date}/>
                     <StatCard title="Blood Pressure" value={bp} units="mmHG" faIconComponent={faTachometerAlt} date={date}/>
@@ -32,19 +32,19 @@ function Historical() {
                 </div>
             </div>
             
-            <div style={{width: '80%', overflow: 'hidden', top: '31vh', position: 'fixed'}}>
-                <div style={{width: '45%', float: 'left'}}>
+            <div style={{width: '90%', overflow: 'hidden', top: '31vh', position: 'fixed'}}>
+                <div style={{width: '40%', display: 'left'}}>
                     <BPHistoricalChart/>
                 </div>
-                <div style={{width: '45%', float: 'right'}}>
+                <div style={{width: '40%', float: 'right'}}>
                     <BMIHistoricalChart/>
                 </div>
             </div>
-            <div style={{width: '80%', overflow: 'hidden', top: '65vh', position: 'fixed'}}>
-                <div style={{width: '45%', float: 'left'}}>
+            <div style={{width: '90%', overflow: 'hidden', top: '65vh', position: 'fixed'}}>
+                <div style={{width: '40%', float: 'left'}}>
                     <HRHistoricalChart/>
                 </div>
-                <div style={{width: '45%', float: 'right'}}>
+                <div style={{width: '40%', float: 'right'}}>
                     <WeightHistoricalChart/>
                 </div>
             </div>
