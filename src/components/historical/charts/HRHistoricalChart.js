@@ -111,8 +111,8 @@ export class HRHistoricalChart extends Component {
                 <Line
                     data={graphInfo}
 
-                    width={700}
-                    height={300}
+                    width={600}
+                    height={250}
                     fontColor='#FFFFFF'
                     options={{
                         title: {

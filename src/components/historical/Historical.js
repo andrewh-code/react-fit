@@ -23,7 +23,7 @@ function Historical() {
 
     return (
         <Fragment>
-            <div style={{width: '90%', overflow: 'hidden', top: '10vh', position: 'fixed'}}>
+            <div style={{border: '1px solid white', width: '90%', overflow: 'hidden', top: '10vh', position: 'fixed'}}>
                 <div style={cardContainerStyle}>
                     <StatCard title="Heart Rate" value={hr} units="bpm" faIconComponent={faHeartbeat} date={date}/>
                     <StatCard title="Blood Pressure" value={bp} units="mmHG" faIconComponent={faTachometerAlt} date={date}/>
@@ -32,19 +32,20 @@ function Historical() {
                 </div>
             </div>
             
-            <div style={{width: '90%', overflow: 'hidden', top: '31vh', position: 'fixed'}}>
-                <div style={{width: '40%', float: 'left'}}>
+            <div style={{border: '1px solid white', width: '90%', overflow: 'hidden', top: '31vh', position: 'fixed', padding: '0.25em'}}>
+                <div style={{width: '40%', float: 'left', marginRight: '1em', marginLeft: '4.5em'}}>
                     <BPHistoricalChart/>
                 </div>
-                <div style={{width: '40%', float: 'right'}}>
+                <div style={{width: '40%', float: 'right', marginRight: '4.5em', marginLeft: '1em'}}>
                     <BMIHistoricalChart/>
                 </div>
             </div>
-            <div style={{width: '90%', overflow: 'hidden', top: '65vh', position: 'fixed'}}>
-                <div style={{width: '40%', float: 'left'}}>
+
+            <div style={{border: '1px solid white', width: '90%', overflow: 'hidden', top: '66vh', position: 'fixed', padding: '0.25em'}}>                
+                <div style={{width: '40%', float: 'left', marginRight: '1em', marginLeft: '4.5em'}}>
                     <HRHistoricalChart/>
                 </div>
-                <div style={{width: '40%', float: 'right'}}>
+                <div style={{width: '40%', float: 'right', marginRight: '4.5em', marginLeft: '1em'}}>
                     <WeightHistoricalChart/>
                 </div>
             </div>
