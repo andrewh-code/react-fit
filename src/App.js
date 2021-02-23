@@ -2,7 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import NavigationBar from './components/navigation/NavigationBar';
 import BloodPressure from './components/bloodpressure/BloodPressure';
-import { Route, BrowserRouter as Router} from 'react-router-dom';
+import { Route, BrowserRouter as Router, Redirect} from 'react-router-dom';
 import Historical from './components/historical/Historical';
 import BMI from './components/bmi/BMI';
 

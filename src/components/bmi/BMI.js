@@ -4,9 +4,7 @@ import BMIDailyInput from './BMIDailyInput'
 export class BMI extends Component {
     render() {
         return (
-            <div>
-                <BMIDailyInput/>
-            </div>
+            <BMIDailyInput/>
         )
     }
 }

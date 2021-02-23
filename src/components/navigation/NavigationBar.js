@@ -27,7 +27,7 @@ export default function NavigationBar() {
                 <h1>React Fit</h1>
                  <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='/historical'>Home</Link>
                     </li>
                     <li>
                         <Link to='/bmi'>BMI</Link>
