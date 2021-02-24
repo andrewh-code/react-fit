@@ -13,7 +13,9 @@ export class BMIDailyInput extends Component {
             height: "",
             weight: "",
             bmi: 0,
-            errorMsg: "",
+            errorHeight: "",
+            errorWeight: "",
+            errorSystem: "",
             error: false
         }
     }
@@ -24,7 +26,12 @@ export class BMIDailyInput extends Component {
 
     calculateBMI = (e) => {
         e.preventDefault();     // prevent the page refresh
-        
+        // reset error messages
+        this.setState({
+            errorHeight: "",
+            errorWeight: "",
+            errorSystem: ""
+        })
         const { gender, system, height, weight } = this.state;
         var errorMsg = "";
         var error = false;
@@ -36,7 +43,7 @@ export class BMIDailyInput extends Component {
         if (!this.isValidInput(height)){
             this.setState({
                 error: true,
-                errorMsg: "invalid input for height"
+                errorHeight: "invalid input for height"
             });
             return;
         }
@@ -44,7 +51,7 @@ export class BMIDailyInput extends Component {
         if (!this.isValidInput(weight)){
             this.setState({
                 error: true,
-                errorMsg: "invalid input for weight"
+                errorWeight: "invalid input for weight"
             });
             return;
         }
@@ -55,14 +62,14 @@ export class BMIDailyInput extends Component {
         if (!system){
             this.setState({
                 error: true,
-                errorMsg: "Please input measurement system"
+                errorSystem: "Please input measurement system"
             });
             return;
         }
         if (system === "metric"){
-            bmi = newWeight / Math.pow(newHeight,2);
+            bmi = (newWeight / Math.pow(newHeight/100, 2)).toFixed(2);
         } else if (system === "imperial"){
-            bmi = (newWeight / 0.454) / Math.pow((newHeight * 2.54), 2);
+            bmi = ((newWeight * 0.454) / Math.pow((newHeight * 2.54/100), 2)).toFixed(2);
         } else {
             errorMsg = "please choose measurement system"
             error = true;
@@ -102,7 +109,9 @@ export class BMIDailyInput extends Component {
             weight,
             system,
             bmi,
-            errorMsg,
+            errorHeight,
+            errorWeight,
+            errorSystem,
             error
         } = this.state;
 
@@ -130,6 +139,7 @@ export class BMIDailyInput extends Component {
                                 <option value="metric">cm/Kgs</option>
                             </select>
                         </div>
+                        <p id="error">{errorSystem ? errorSystem : ""}</p>
                     </center>
                     <center>
                         <div style={{marginTop: '1em'}}>
@@ -166,6 +176,7 @@ export class BMIDailyInput extends Component {
                                 required
                             />
                         </div>
+                        <p id="error">{errorHeight ? errorHeight : ""}</p>
 
                     </center>
 
@@ -187,6 +198,7 @@ export class BMIDailyInput extends Component {
                                 required
                             />
                         </div>
+                        <p id="error">{errorWeight ? errorWeight : ""}</p>
 
                     </div>
                     </center>
