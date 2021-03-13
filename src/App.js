@@ -15,8 +15,8 @@ export default class App extends Component {
         <div className="App">
           <NavigationBar />
           <header className="App-header">
-            <Route exact path = "/" component = { Historical }/>
-            <Route exact path = "/bloodpressure" component = { BloodPressure }/>
+            <Route exact path = "/" component = { BloodPressure }/>
+            <Route exact path = "/bp" component = { BloodPressure }/>
             <Route exact path = "/bmi" component = { BMI }/>
             <Route exact path="/historical" component = { Historical }/>
           </header>

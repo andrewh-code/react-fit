@@ -129,94 +129,83 @@ export class BMIDailyInput extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.calculateBMI}>
-                    <div style={{ marginTop: '1em', width: '50%' }}>
-                        <select id="weightUnits" style={{ fontSize: '0.75em' }}
-                            name="system"
-                            value={system}
-                            onChange={this.handleChange}>
-                            <option value="">Measurement:</option>
-                            <option value="imperial">inches/lbs</option>
-                            <option value="metric">cm/Kgs</option>
-                        </select>
-                    </div>
+
+                    <select id="weightUnits" style={{ fontSize: '0.75em' }}
+                        name="system"
+                        value={system}
+                        onChange={this.handleChange}>
+                        <option value="">Measurement:</option>
+                        <option value="imperial">inches/lbs</option>
+                        <option value="metric">cm/Kgs</option>
+                    </select>
                     <p id="error">{errorSystem ? errorSystem : ""}</p>
-
-                    <div style={{ marginTop: '1em', width: '50%' }}>
-                        <center>
-                            <div className="form-check form-check-inline" style={{ marginRight: '1em' }}>
-                                <input className="form-check-input"
-                                    type="radio"
-                                    name="gender"
-                                    id="maleRadioInput"
-                                    onChange={this.handleChange}
-                                    value="male" />
-                                <label className="form-check-label" htmlFor="maleRadioInput" style={{ fontSize: '0.75em' }}>Male</label>
-                            </div>
-                            <div className="form-check form-check-inline" style={{ marginLeft: '1em' }}>
-                                <input className="form-check-input"
-                                    type="radio"
-                                    name="gender"
-                                    id="femaleRadioInput"
-                                    onChange={this.handleChange}
-                                    value="female" />
-                                <label className="form-check-label" htmlFor="femaleRadioInput" style={{ fontSize: '0.75em' }}>Female</label>
-                            </div>
-                        </center>
-                    </div>
-
-                    <div>
-                        <div style={{ marginTop: '1em', width: '30%'}}>
-                            <label style={{ display: 'inline-block', width: '30%', fontSize: '0.75em' }} htmlFor="height">{heightUnits}</label>
-                            <input style={{ width: '70%', float: 'left' }} className="form-control border-0 shadow-none"
-                                type="text"
-                                name="height"
-                                placeholder="enter height..."
+                    <center>
+                        <div className="form-check form-check-inline" style={{ marginRight: '1em' }}>
+                            <input className="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="maleRadioInput"
                                 onChange={this.handleChange}
-                                value={height}
-                                required
-                            />
+                                value="male" />
+                            <label className="form-check-label" htmlFor="maleRadioInput" style={{ fontSize: '0.75em' }}>Male</label>
                         </div>
-                        
-                        <p id="error">{errorHeight ? errorHeight : ""}</p>
-                        
-                    </div>
-                    
-                
-                    
-                    <div>
-                        <div style={{ marginTop: '1em', width: '50%', float: 'left'}}>
-                            <div style={{ display: 'inline', width: '50%' }}>
-                                {gender != "female" ? <FontAwesomeIcon icon={faMale} size="10x" /> : <FontAwesomeIcon icon={faFemale} size="10x" />}
-                            </div>
-
-                            <div style={{ display: 'inline', float: 'right', width: '40%', marginRight: '1em', marginTop: '4em' }}>
-                                <label style={{ display: 'inline-block', width: '30%', fontSize: '0.75em' }} htmlFor="height">{weightUnits}</label>
+                        <div className="form-check form-check-inline" style={{ marginLeft: '1em' }}>
+                            <input className="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="femaleRadioInput"
+                                onChange={this.handleChange}
+                                value="female" />
+                            <label className="form-check-label" htmlFor="femaleRadioInput" style={{ fontSize: '0.75em' }}>Female</label>
+                        </div>
+                    </center>
+                    <center>
+                        <div>
+                            <div style={{ marginTop: '1em', width: '30%' }}>
+                                <label style={{ display: 'inline-block', width: '30%', fontSize: '0.75em' }} htmlFor="height">{heightUnits}</label>
                                 <input style={{ width: '70%', float: 'left' }} className="form-control border-0 shadow-none"
                                     type="text"
-                                    name="weight"
-                                    placeholder="enter weight..."
+                                    name="height"
+                                    placeholder="enter height..."
                                     onChange={this.handleChange}
-                                    value={weight}
+                                    value={height}
                                     required
                                 />
                             </div>
-                            <p id="error">{errorWeight ? errorWeight : ""}</p>
-                        </div>
-                        
-                        <div style={{ marginTop: '1em', width: '50%', float: 'right'}}>
-                            <BMIInfo/>
-                        </div>
-                    </div>
 
+                            <p id="error">{errorHeight ? errorHeight : ""}</p>
+                        </div>
+                    </center>
+                    <div>
+                        <div style={{ display: 'inline', width: '50%' }}>
+                            {gender != "female" ? <FontAwesomeIcon icon={faMale} size="10x" /> : <FontAwesomeIcon icon={faFemale} size="10x" />}
+                        </div>
+
+                        <div style={{ display: 'inline', float: 'right', width: '40%', marginRight: '1em', marginTop: '4em' }}>
+                            <label style={{ display: 'inline-block', width: '30%', fontSize: '0.75em' }} htmlFor="height">{weightUnits}</label>
+                            <input style={{ width: '70%', float: 'left' }} className="form-control border-0 shadow-none"
+                                type="text"
+                                name="weight"
+                                placeholder="enter weight..."
+                                onChange={this.handleChange}
+                                value={weight}
+                                required
+                            />
+                        </div>
+                        <p id="error">{errorWeight ? errorWeight : ""}</p>
+                    </div>
                     <div style={{}}>
                         <button
                             className="btn btn-light"
                             type="submit">Calculate BMI
                             </button>
-                            <p>Your BMI is: {this.state.bmi}</p>
                     </div>
-
                 </form>
+                <div style={{height: '100px'}}>
+                    { this.state.bmi ? <p style={{margin: "1em"}}>Your BMI is: {this.state.bmi}</p> : <p style={{margin: "1em"}}></p> } 
+                </div>
+
+                <BMIInfo />
 
             </div>
         )
