@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartbeat, faWeight, faTachometerAlt, faPercentage } from '@fortawesome/free-solid-svg-icons';
 
-export default function StatCard(props) {
+function StatCard(props) {
 
     const {
         title,
@@ -46,4 +46,4 @@ export default function StatCard(props) {
     )
 }
 
-
+export default StatCard;
