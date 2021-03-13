@@ -15,10 +15,10 @@ export default class App extends Component {
         <div className="App">
           <NavigationBar />
           <header className="App-header">
-            <Route exact path = "/" component = { BloodPressure }/>
-            <Route exact path = "/bp" component = { BloodPressure }/>
-            <Route exact path = "/bmi" component = { BMI }/>
-            <Route exact path="/historical" component = { Historical }/>
+            <Route exact path = "/react-fit/" component = { BloodPressure }/>
+            <Route exact path = "/react-fit/bp" component = { BloodPressure }/>
+            <Route exact path = "/react-fit/bmi" component = { BMI }/>
+            <Route exact path="/react-fit/historical" component = { Historical }/>
           </header>
         </div>
       </Router>

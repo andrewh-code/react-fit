@@ -27,13 +27,13 @@ export default function NavigationBar() {
                 <h1>React Fit</h1>
                  <ul>
                     <li>
-                        <Link to='/bmi'>BMI</Link>
+                        <Link to='/react-fit/bmi'>BMI</Link>
                     </li>
                     <li>
-                        <Link to='/bp'>Blood Pressure</Link>        
+                        <Link to='/react-fit/bp'>Blood Pressure</Link>        
                     </li>
                     <li>
-                        <Link to='/historical'>Historical</Link>
+                        <Link to='/react-fit/historical'>Historical</Link>
                     </li>
                 </ul>
             </div>
