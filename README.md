@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Info
 The following project is a front end project built in React that allows users to be able to calculate their BMI and as well as their blood pressure.
 
+### demo
+https://andrewh-code.github.io/react-fit/
+
 ### Tech Stack
 This website was built using the following tech stack
 
